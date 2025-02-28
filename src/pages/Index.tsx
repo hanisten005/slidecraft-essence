@@ -1,11 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import TikTokSlideshow from "../components/TikTokSlideshow";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
+      <div className="max-w-md mx-auto mb-8 text-center">
+        <h1 className="text-3xl font-bold mb-2 text-gray-800">TikTok Slideshow</h1>
+        <p className="text-gray-600">
+          Professional slideshow optimized for TikTok's vertical format (9:16)
+        </p>
+      </div>
+      
+      <TikTokSlideshow />
+      
+      <div className="mt-8 text-sm text-gray-500 text-center max-w-md">
+        <p>
+          This slideshow is designed for TikTok's 9:16 vertical format. 
+          Navigate using the arrows or dots below the slideshow.
+        </p>
       </div>
     </div>
   );
