@@ -48,11 +48,11 @@ const TikTokSlideshow = () => {
           <h2 className="slide-title">Common Website Mistakes</h2>
           <div className="split-screen">
             <div className="screen-half">
-              <X className="screen-icon text-slideshow-warning" />
+              <X className="screen-icon text-red-500" />
               <span className="screen-label">Cluttered UI</span>
             </div>
             <div className="screen-half">
-              <Check className="screen-icon text-slideshow-success" />
+              <Check className="screen-icon text-green-500" />
               <span className="screen-label">Clean UI</span>
             </div>
           </div>
@@ -129,6 +129,13 @@ const TikTokSlideshow = () => {
           </div>
         </div>
       </div>
+
+      {/* WebWind Digital Logo */}
+      <img 
+        src="https://webwinddigital.com/wp-content/uploads/2022/04/Asset-19-768x256.png" 
+        alt="WebWind Digital Logo" 
+        className="logo"
+      />
 
       {/* Navigation Dots */}
       <div className="navigation">
