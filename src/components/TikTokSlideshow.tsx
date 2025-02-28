@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Check, X, Image } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Check, X } from 'lucide-react';
 
 const TikTokSlideshow = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -36,10 +36,6 @@ const TikTokSlideshow = () => {
           <h1 className="slide-title animate-slide-up">
             Don't Make This Mistake on Your Website
           </h1>
-          <div className="image-placeholder">
-            <Image className="placeholder-icon" />
-            <span className="placeholder-text">Your Image Here</span>
-          </div>
           <p className="slide-description animate-slide-up">
             Common errors that could be costing you customers and revenue
           </p>
@@ -60,10 +56,6 @@ const TikTokSlideshow = () => {
               <span className="screen-label">Clean UI</span>
             </div>
           </div>
-          <div className="image-placeholder secondary">
-            <Image className="placeholder-icon" />
-            <span className="placeholder-text">Example Screenshot</span>
-          </div>
           <p className="slide-description">
             Websites overloaded with features, animations, and clutter lead to slow load times, 
             bad UX, and high bounce rates.
@@ -75,10 +67,6 @@ const TikTokSlideshow = () => {
       <div className={`slide ${activeSlide === 2 ? 'active' : ''}`}>
         <div className="slide-content">
           <h2 className="slide-title">What to Do Instead</h2>
-          <div className="image-placeholder">
-            <Image className="placeholder-icon" />
-            <span className="placeholder-text">Clean Design Example</span>
-          </div>
           <div className="point-list">
             <div className="point-item">
               <Check className="point-icon" />
@@ -105,10 +93,6 @@ const TikTokSlideshow = () => {
       {/* Slide 4 - Inspirational Quote */}
       <div className={`slide ${activeSlide === 3 ? 'active' : ''} bg-gradient-elegant`}>
         <div className="slide-content">
-          <div className="image-placeholder centered">
-            <Image className="placeholder-icon" />
-            <span className="placeholder-text">Inspirational Image</span>
-          </div>
           <div className="quote animate-fade-in">
             "Simplicity is the ultimate sophistication."
           </div>
@@ -123,10 +107,6 @@ const TikTokSlideshow = () => {
           <h2 className="slide-title">The 80/20 Rule</h2>
           <div className="flex-container">
             <div className="pie-chart"></div>
-            <div className="image-placeholder small">
-              <Image className="placeholder-icon" />
-              <span className="placeholder-text">Data Visualization</span>
-            </div>
           </div>
           <p className="pie-label">
             <span className="highlight-text">80%</span> of impact comes from <span className="highlight-text">20%</span> of elements
@@ -137,15 +117,18 @@ const TikTokSlideshow = () => {
         </div>
       </div>
 
-      {/* Slide 6 - Final Message */}
+      {/* Slide 6 - Final Message with Logo Placeholder */}
       <div className={`slide ${activeSlide === 5 ? 'active' : ''} bg-gradient-subtle`}>
         <div className="slide-content">
           <h2 className="slide-title animate-scale-in">
             Don't Lose Customers
           </h2>
-          <div className="image-placeholder large">
-            <Image className="placeholder-icon" />
-            <span className="placeholder-text">Your Brand Here</span>
+          <div className="logo-placeholder">
+            <img 
+              src="public/lovable-uploads/fd824cee-5b86-4e06-9147-9861428e1738.png" 
+              alt="WebWind Digital Logo" 
+              className="logo-image"
+            />
           </div>
           <p className="slide-description animate-fade-in">
             Contact us for a custom website at an affordable price!
@@ -155,13 +138,6 @@ const TikTokSlideshow = () => {
           </div>
         </div>
       </div>
-
-      {/* WebWind Digital Logo */}
-      <img 
-        src="https://webwinddigital.com/wp-content/uploads/2022/04/Asset-19-768x256.png" 
-        alt="WebWind Digital Logo" 
-        className="logo"
-      />
 
       {/* Navigation Dots */}
       <div className="navigation">
