@@ -366,40 +366,90 @@
   color: #ccc;
 }
 
-.pie-chart {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: conic-gradient(
-    #9b87f5 20%,
-    rgba(155, 135, 245, 0.3) 0
-  );
-  position: relative;
+/* IMPROVED PARETO CHART FOR 80/20 RULE */
+.bg-pareto-gradient {
+  background: linear-gradient(135deg, #2A2E3B 0%, #1a1f2c 100%);
+}
+
+.pareto-chart {
+  width: 100%;
+  max-width: 300px;
+  margin: 1.5rem auto;
   opacity: 0;
-  transform: scale(0.9);
-  animation: scale-in 0.6s ease-out forwards;
+  animation: fade-in 0.8s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.pareto-container {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  padding-right: 10px;
+}
+
+.pareto-bar {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  padding-bottom: 10px;
+  animation: grow-up 1.5s ease-out forwards;
+}
+
+.pareto-twenty {
+  width: 40%;
+  background: linear-gradient(to top, #9b87f5, rgba(155, 135, 245, 0.5));
+  height: 20%;
   animation-delay: 0.8s;
 }
 
-.pie-chart::before {
-  content: "20%";
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
+.pareto-eighty {
+  width: 60%;
+  background: linear-gradient(to top, #D6BCFA, rgba(214, 188, 250, 0.5));
+  height: 80%;
+  animation-delay: 1s;
 }
 
-.pie-label {
-  font-size: 1rem;
-  font-weight: 500;
+.pareto-value {
+  position: absolute;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+  bottom: 40%;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.pareto-labels {
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
-  color: #fff;
-  opacity: 0;
-  animation: fade-in 0.6s ease-out forwards;
-  animation-delay: 1s;
+  gap: 2rem;
+}
+
+.pareto-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.pareto-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.pareto-dot-twenty {
+  background-color: #9b87f5;
+}
+
+.pareto-dot-eighty {
+  background-color: #D6BCFA;
 }
 
 .highlight-text {
@@ -491,7 +541,7 @@
 @keyframes scale-in {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
@@ -519,6 +569,16 @@
   }
 }
 
+@keyframes grow-up {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (max-height: 800px) {
   .slide-title {
     font-size: 2rem;
@@ -530,10 +590,8 @@
     margin-bottom: 1.5rem;
   }
   
-  .pie-chart {
-    width: 120px;
-    height: 120px;
-    margin: 1rem auto;
+  .pareto-container {
+    height: 150px;
   }
   
   .quote {

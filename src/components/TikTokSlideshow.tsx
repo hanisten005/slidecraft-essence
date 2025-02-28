@@ -100,19 +100,38 @@ const TikTokSlideshow = () => {
         </div>
       </div>
 
-      {/* Slide 5 - Bonus Tip (80/20 Rule) */}
-      <div className={`slide ${activeSlide === 4 ? 'active' : ''}`}>
+      {/* Slide 5 - Bonus Tip (80/20 Rule) - IMPROVED DESIGN */}
+      <div className={`slide ${activeSlide === 4 ? 'active' : ''} bg-pareto-gradient`}>
         <div className="slide-content">
           <div className="pill animate-slide-up">BONUS TIP</div>
           <h2 className="slide-title">The 80/20 Rule</h2>
-          <div className="flex-container">
-            <div className="pie-chart"></div>
+          
+          <div className="pareto-chart">
+            <div className="pareto-container">
+              <div className="pareto-bar pareto-twenty">
+                <span className="pareto-value">20%</span>
+              </div>
+              <div className="pareto-bar pareto-eighty">
+                <span className="pareto-value">80%</span>
+              </div>
+            </div>
+            <div className="pareto-labels">
+              <div className="pareto-label">
+                <div className="pareto-dot pareto-dot-twenty"></div>
+                <span>Effort</span>
+              </div>
+              <div className="pareto-label">
+                <div className="pareto-dot pareto-dot-eighty"></div>
+                <span>Results</span>
+              </div>
+            </div>
           </div>
-          <p className="pie-label">
-            <span className="highlight-text">80%</span> of impact comes from <span className="highlight-text">20%</span> of elements
+          
+          <p className="slide-description">
+            <span className="highlight-text">20%</span> of your website elements drive <span className="highlight-text">80%</span> of user engagement
           </p>
           <p className="slide-description">
-            Focus on the essential elements that drive engagement
+            Focus on the essential elements that convert
           </p>
         </div>
       </div>
