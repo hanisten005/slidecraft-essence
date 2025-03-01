@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
 
@@ -14,7 +13,6 @@ const TikTokSlideshow = () => {
     setActiveSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
   };
 
-  // Auto-advance slides every 10 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       nextSlide();
@@ -26,7 +24,6 @@ const TikTokSlideshow = () => {
   return (
     <div className="slideshow-wrapper">
       <div className="slideshow-container">
-        {/* Slide 1 - Warning Message */}
         <div className={`slide ${activeSlide === 0 ? 'active' : ''}`}>
           <div className="slide-content">
             <div className="pill animate-slide-up">WARNING</div>
@@ -39,7 +36,6 @@ const TikTokSlideshow = () => {
           </div>
         </div>
 
-        {/* Slide 2 - Common Mistake */}
         <div className={`slide ${activeSlide === 1 ? 'active' : ''}`}>
           <div className="slide-content">
             <h2 className="slide-title">Common Website Mistakes</h2>
@@ -60,7 +56,6 @@ const TikTokSlideshow = () => {
           </div>
         </div>
 
-        {/* Slide 3 - What to Do Instead */}
         <div className={`slide ${activeSlide === 2 ? 'active' : ''}`}>
           <div className="slide-content">
             <h2 className="slide-title">What to Do Instead</h2>
@@ -93,7 +88,6 @@ const TikTokSlideshow = () => {
           </div>
         </div>
 
-        {/* Slide 4 - Inspirational Quote */}
         <div className={`slide ${activeSlide === 3 ? 'active' : ''} bg-gradient-elegant`}>
           <div className="slide-content">
             <div className="quote animate-fade-in">
@@ -103,7 +97,6 @@ const TikTokSlideshow = () => {
           </div>
         </div>
 
-        {/* Slide 5 - Bonus Tip (80/20 Rule) */}
         <div className={`slide ${activeSlide === 4 ? 'active' : ''} bg-pareto-gradient`}>
           <div className="slide-content">
             <div className="pill animate-slide-up">BONUS TIP</div>
@@ -139,7 +132,6 @@ const TikTokSlideshow = () => {
           </div>
         </div>
 
-        {/* Slide 6 - Final Message with WebWind Digital Logo */}
         <div className={`slide ${activeSlide === 5 ? 'active' : ''} bg-gradient-subtle`}>
           <div className="slide-content">
             <h2 className="slide-title animate-scale-in">
@@ -164,7 +156,6 @@ const TikTokSlideshow = () => {
         </div>
       </div>
       
-      {/* External navigation controls */}
       <div className="external-controls">
         <button 
           className="nav-button nav-button-prev" 
