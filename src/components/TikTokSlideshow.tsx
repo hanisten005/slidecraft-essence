@@ -127,18 +127,20 @@ const TikTokSlideshow = () => {
         </div>
       </div>
 
-      {/* Slide 6 - Final Message with Logo Placeholder */}
+      {/* Slide 6 - Final Message with Round Logo */}
       <div className={`slide ${activeSlide === 5 ? 'active' : ''} bg-gradient-subtle`}>
         <div className="slide-content">
           <h2 className="slide-title animate-scale-in">
             Don't Lose Customers
           </h2>
-          <div className="logo-placeholder">
-            <img 
-              src="public/lovable-uploads/fd824cee-5b86-4e06-9147-9861428e1738.png" 
-              alt="WebWind Digital Logo" 
-              className="logo-image"
-            />
+          <div className="logo-container">
+            <div className="round-logo-placeholder">
+              <img 
+                src="public/lovable-uploads/fd824cee-5b86-4e06-9147-9861428e1738.png" 
+                alt="WebWind Digital Logo" 
+                className="round-logo-image"
+              />
+            </div>
           </div>
           <p className="slide-description animate-fade-in">
             Contact us for a custom website at an affordable price!

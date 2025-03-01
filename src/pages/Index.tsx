@@ -11,12 +11,14 @@ const Index = () => {
         </p>
       </div>
       
-      <TikTokSlideshow />
+      <div className="tiktok-container">
+        <TikTokSlideshow />
+      </div>
       
       <div className="mt-8 text-sm text-gray-400 text-center max-w-md">
         <p>
-          This slideshow is designed for TikTok's 9:16 vertical format. 
-          Navigate using the arrows or dots below the slideshow.
+          This slideshow is designed for TikTok's 9:16 vertical format and includes clean, minimalist slides.
+          The last slide features a round logo placeholder for your brand.
         </p>
       </div>
     </div>
