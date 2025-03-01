@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Check, X } from 'lucide-react';
 
 const TikTokSlideshow = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -8,14 +7,6 @@ const TikTokSlideshow = () => {
 
   const nextSlide = () => {
     setActiveSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-  };
-
-  const prevSlide = () => {
-    setActiveSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-  };
-
-  const goToSlide = (index: number) => {
-    setActiveSlide(index);
   };
 
   // Auto-advance slides every 10 seconds
@@ -48,11 +39,11 @@ const TikTokSlideshow = () => {
           <h2 className="slide-title">Common Website Mistakes</h2>
           <div className="split-screen">
             <div className="screen-half">
-              <X className="screen-icon text-red-500" />
+              <span className="screen-icon text-red-500">✕</span>
               <span className="screen-label">Cluttered UI</span>
             </div>
             <div className="screen-half">
-              <Check className="screen-icon text-green-500" />
+              <span className="screen-icon text-green-500">✓</span>
               <span className="screen-label">Clean UI</span>
             </div>
           </div>
@@ -69,19 +60,19 @@ const TikTokSlideshow = () => {
           <h2 className="slide-title">What to Do Instead</h2>
           <div className="point-list">
             <div className="point-item">
-              <Check className="point-icon" />
+              <span className="point-icon">✓</span>
               <span className="point-text">
                 Focus on clean, simple design
               </span>
             </div>
             <div className="point-item">
-              <Check className="point-icon" />
+              <span className="point-icon">✓</span>
               <span className="point-text">
                 Optimize for fast loading times
               </span>
             </div>
             <div className="point-item">
-              <Check className="point-icon" />
+              <span className="point-icon">✓</span>
               <span className="point-text">
                 Ensure mobile responsiveness
               </span>
@@ -100,7 +91,7 @@ const TikTokSlideshow = () => {
         </div>
       </div>
 
-      {/* Slide 5 - Bonus Tip (80/20 Rule) - IMPROVED DESIGN */}
+      {/* Slide 5 - Bonus Tip (80/20 Rule) */}
       <div className={`slide ${activeSlide === 4 ? 'active' : ''} bg-pareto-gradient`}>
         <div className="slide-content">
           <div className="pill animate-slide-up">BONUS TIP</div>
@@ -156,27 +147,6 @@ const TikTokSlideshow = () => {
             Get a website that converts
           </div>
         </div>
-      </div>
-
-      {/* Navigation Dots */}
-      <div className="navigation">
-        {Array.from({ length: totalSlides }).map((_, index) => (
-          <div
-            key={index}
-            className={`nav-dot ${activeSlide === index ? 'active' : ''}`}
-            onClick={() => goToSlide(index)}
-          />
-        ))}
-      </div>
-
-      {/* Controls */}
-      <div className="slide-controls">
-        <button className="control-button" onClick={prevSlide}>
-          <ChevronLeft />
-        </button>
-        <button className="control-button" onClick={nextSlide}>
-          <ChevronRight />
-        </button>
       </div>
     </div>
   );
