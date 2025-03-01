@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
 
 const TikTokSlideshow = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -66,19 +66,25 @@ const TikTokSlideshow = () => {
             <h2 className="slide-title">What to Do Instead</h2>
             <div className="point-list">
               <div className="point-item">
-                <span className="point-icon">✓</span>
+                <span className="point-icon">
+                  <Check size={20} className="check-icon" />
+                </span>
                 <span className="point-text">
                   Focus on clean, simple design
                 </span>
               </div>
               <div className="point-item">
-                <span className="point-icon">✓</span>
+                <span className="point-icon">
+                  <Check size={20} className="check-icon" />
+                </span>
                 <span className="point-text">
                   Optimize for fast loading times
                 </span>
               </div>
               <div className="point-item">
-                <span className="point-icon">✓</span>
+                <span className="point-icon">
+                  <Check size={20} className="check-icon" />
+                </span>
                 <span className="point-text">
                   Ensure mobile responsiveness
                 </span>
