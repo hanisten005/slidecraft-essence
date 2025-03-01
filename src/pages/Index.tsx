@@ -16,7 +16,7 @@ const Index = () => {
       <div className="mt-8 text-sm text-gray-400 text-center max-w-md">
         <p>
           This slideshow is designed for TikTok's 9:16 vertical format. 
-          Navigate using the arrows or dots below the slideshow.
+          Use the navigation buttons above the slideshow to change slides.
         </p>
       </div>
     </div>

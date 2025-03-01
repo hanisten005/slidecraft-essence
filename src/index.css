@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -197,173 +196,81 @@
   animation-delay: 0.7s;
 }
 
-/* Logo placeholder for final slide */
-.logo-placeholder {
-  width: 200px;
-  height: 200px;
+/* Redesigned logo container for last slide */
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem auto;
+}
+
+.logo-circle {
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  background: rgba(155, 135, 245, 0.15);
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem auto;
-  padding: 10px;
+  padding: 0;
   box-shadow: 0 0 30px rgba(155, 135, 245, 0.3);
-  border: 2px solid rgba(155, 135, 245, 0.3);
+  border: 3px solid rgba(155, 135, 245, 0.3);
   overflow: hidden;
-  animation: pulse-subtle 3s ease-in-out infinite;
+  position: relative;
 }
 
 .logo-image {
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 85%;
   object-fit: contain;
+  border-radius: 50%;
 }
 
-.flex-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 1rem 0;
-}
-
-.quote {
-  font-style: italic;
-  font-size: 1.75rem;
-  line-height: 1.4;
-  max-width: 90%;
-  margin: 0 auto 1rem;
+/* External navigation buttons */
+.slideshow-wrapper {
   position: relative;
-  color: #D6BCFA;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
-.quote:before,
-.quote:after {
-  content: '"';
-  font-size: 3rem;
+.external-controls {
   position: absolute;
-  opacity: 0.2;
-  color: #9b87f5;
-}
-
-.quote:before {
-  top: -20px;
-  left: -15px;
-}
-
-.quote:after {
-  bottom: -40px;
-  right: -15px;
-}
-
-.quote-author {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-top: 1rem;
-  color: #aaa;
-}
-
-.navigation {
-  position: absolute;
-  bottom: 2rem;
-  left: 0;
+  top: -50px;
   right: 0;
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  z-index: 20;
+  gap: 8px;
+  z-index: 30;
 }
 
-.nav-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: rgba(155, 135, 245, 0.3);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.nav-dot.active {
-  background-color: #9b87f5;
-  transform: scale(1.3);
-}
-
-.slide-controls {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1rem;
-  z-index: 20;
-}
-
-.control-button {
-  background-color: rgba(26, 31, 44, 0.7);
-  border: 1px solid rgba(155, 135, 245, 0.3);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.nav-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(155, 135, 245, 0.15);
+  border: 1px solid rgba(155, 135, 245, 0.3);
+  color: white;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.control-button:hover {
-  background-color: rgba(155, 135, 245, 0.2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.nav-button:hover {
+  background-color: rgba(155, 135, 245, 0.4);
+  transform: scale(1.05);
 }
 
-.control-button svg {
-  width: 20px;
-  height: 20px;
-  color: #fff;
+.nav-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(155, 135, 245, 0.5);
 }
 
-.point-list {
-  text-align: left;
-  width: 100%;
-  max-width: 90%;
-}
-
-.point-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: slide-up 0.6s ease-out forwards;
-}
-
-.point-item:nth-child(1) {
-  animation-delay: 0.8s;
-}
-
-.point-item:nth-child(2) {
-  animation-delay: 1s;
-}
-
-.point-item:nth-child(3) {
-  animation-delay: 1.2s;
-}
-
-.point-icon {
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  margin-right: 12px;
-  color: #9b87f5;
-}
-
-.point-text {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: #ccc;
+/* Remove old logo placeholder styles that are no longer needed */
+.logo-placeholder {
+  display: none;
 }
 
 /* IMPROVED PARETO CHART FOR 80/20 RULE */
